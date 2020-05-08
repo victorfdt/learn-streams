@@ -13,5 +13,4 @@ public class FirstNameComparator implements Comparator<Employee> {
 
 		return employee1Firstname.compareTo(employee2Firstname);
 	}
-
 }
