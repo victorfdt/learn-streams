@@ -1,10 +1,10 @@
 package com.victor.streams;
 
 import com.victor.streams.interfaces.Exercise;
-import com.victor.streams.reduction.ReductionOperations;
+import com.victor.streams.mapping.MappingObjects;
 
 public class TestLearnStreams {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception {
 
 		// LastNameExample: Sort a stream using MyCorpComparator
 		// Exercise exercise = new LastNameExample();
@@ -22,7 +22,19 @@ public class TestLearnStreams {
 		//Exercise exercise = new LearnComparable();
 		
 		// Learn reduction operations
-		Exercise exercise = new ReductionOperations();
+		//Exercise exercise = new ReductionOperations();
+		
+		// Parallel operation
+		//Exercise exercise = new ParallelOperation();
+		
+		// Custom Parallel operation
+		//Exercise exercise = new CustomParallelOperation();
+		
+		// Mapping operation
+		//Exercise exercise = new MappingOperation();
+		
+		// Mapping objects
+		Exercise exercise = new MappingObjects();
 
 		exercise.run();
 	}
