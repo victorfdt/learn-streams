@@ -1,7 +1,7 @@
 package com.victor.streams;
 
+import com.victor.streams.collecting.CollectingOperation;
 import com.victor.streams.interfaces.Exercise;
-import com.victor.streams.mapping.MappingObjects;
 
 public class TestLearnStreams {
 	public static void main(String args[]) throws Exception {
@@ -34,7 +34,10 @@ public class TestLearnStreams {
 		//Exercise exercise = new MappingOperation();
 		
 		// Mapping objects
-		Exercise exercise = new MappingObjects();
+		//Exercise exercise = new MappingObjects();
+		
+		// Collecting operation
+		Exercise exercise = new CollectingOperation();
 
 		exercise.run();
 	}
