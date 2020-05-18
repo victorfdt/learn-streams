@@ -42,7 +42,6 @@ public class CollectingOperation implements Exercise {
 		List<Double> myDoubleList2 = myDoubleStream.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
 		myDoubleList2.forEach(e -> System.out.println(e));
 		
-
 	}
 
 }
