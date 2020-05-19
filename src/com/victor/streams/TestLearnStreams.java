@@ -1,8 +1,7 @@
 package com.victor.streams;
 
-import com.victor.streams.collecting.CollectingOperation;
 import com.victor.streams.interfaces.Exercise;
-import com.victor.streams.iterator.UsingIterator;
+import com.victor.streams.peeking.PeekingOperation;
 
 public class TestLearnStreams {
 	public static void main(String args[]) throws Exception {
@@ -17,32 +16,35 @@ public class TestLearnStreams {
 		// Exercise exercise = new LearnStreams();
 
 		// Question1: Question about re-using Streams.
-		//Exercise exercise = new Question1();
+		// Exercise exercise = new Question1();
 
 		// Learn Comparable
-		//Exercise exercise = new LearnComparable();
-		
-		// Learn reduction operations
-		//Exercise exercise = new ReductionOperations();
-		
-		// Parallel operation
-		//Exercise exercise = new ParallelOperation();
-		
-		// Custom Parallel operation
-		//Exercise exercise = new CustomParallelOperation();
-		
-		// Mapping operation
-		//Exercise exercise = new MappingOperation();
-		
-		// Mapping objects
-		//Exercise exercise = new MappingObjects();
-		
-		// Collecting operation
-		//Exercise exercise = new CollectingOperation();
-		
-		// Iterating through a Stream
-		Exercise exercise = new UsingIterator();
+		// Exercise exercise = new LearnComparable();
 
+		// Learn reduction operations
+		// Exercise exercise = new ReductionOperations();
+
+		// Parallel operation
+		// Exercise exercise = new ParallelOperation();
+
+		// Custom Parallel operation
+		// Exercise exercise = new CustomParallelOperation();
+
+		// Mapping operation
+		// Exercise exercise = new MappingOperation();
+
+		// Mapping objects
+		// Exercise exercise = new MappingObjects();
+
+		// Collecting operation
+		// Exercise exercise = new CollectingOperation();
+
+		// Iterating through a Stream
+		// Exercise exercise = new UsingIterator();
+
+		// Iterating using Spliterator
+		// Exercise exercise = new UsingSpliterator();
+		Exercise exercise = new PeekingOperation();
 		exercise.run();
 	}
 }
