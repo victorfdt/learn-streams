@@ -28,14 +28,11 @@ public class PeekingOperation implements Exercise {
 		// which means, that it is changing the data source and it is not allowed.
 		// myStream.peek(e -> e += 1.0).forEach(e -> System.out.println(e));
 
-		// TODO: Why it does not execute the sout?
 		System.out.println("Using peek with count");
-		long value = Stream.of(1, 2, 3, 4, 5).peek(System.out::println).count();
+		Stream.of(1, 2, 3, 4, 5).peek(System.out::println).map(x -> x + 1).forEach(x -> System.out.println("."));
 		
 		System.out.println("Using peek with collect");
 		List<Integer> list = Stream.of(1, 2, 3, 4, 5).peek(System.out::println).collect(Collectors.toList());
-
-		
 	}
 
 }

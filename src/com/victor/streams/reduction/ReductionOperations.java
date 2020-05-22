@@ -26,7 +26,7 @@ public class ReductionOperations implements Exercise {
 
 		// reduce the stream
 		System.out.println("1- Using Optional reduce()");
-		
+
 		Optional<String> reduced = myStream.reduce((a, b) -> {
 			System.out.println("a:" + a);
 			System.out.println("b:" + b);
@@ -38,12 +38,13 @@ public class ReductionOperations implements Exercise {
 			System.out.println(reduced.get());
 			System.out.println();
 		}
-		
+
 		myStream = names.stream();
 
 		System.out.println("2- Using T reduce()");
-		//TODO how does it work? Why is it 
-		String result = myStream.reduce("111", (a,b) -> a.concat(b));
+
+		// TODO how does it work? Why is it
+		String result = myStream.reduce("111", (a, b) -> a.concat(b));
 		System.out.println(result);
 		System.out.println();
 	}

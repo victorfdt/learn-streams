@@ -1,7 +1,7 @@
 package com.victor.streams;
 
 import com.victor.streams.interfaces.Exercise;
-import com.victor.streams.mapping.MappingOperation;
+import com.victor.streams.search.SearchOperation;
 
 public class TestLearnStreams {
 	public static void main(String args[]) throws Exception {
@@ -30,7 +30,7 @@ public class TestLearnStreams {
 		// Exercise exercise = new CustomParallelOperation();
 
 		// Mapping operation
-		Exercise exercise = new MappingOperation();
+		// Exercise exercise = new MappingOperation();
 
 		// Mapping objects
 		// Exercise exercise = new MappingObjects();
@@ -44,6 +44,9 @@ public class TestLearnStreams {
 		// Iterating using Spliterator
 		// Exercise exercise = new UsingSpliterator();
 		// Exercise exercise = new PeekingOperation();
+
+		// Searching Operation
+		Exercise exercise = new SearchOperation();
 
 		exercise.run();
 	}

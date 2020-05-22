@@ -1,6 +1,7 @@
 package com.victor.streams.mapping;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
@@ -22,22 +23,27 @@ public class MappingOperation implements Exercise {
 
 		System.out.println();
 
-		System.out.println("Using flapMap");
+		System.out.println("Using flatMap");
 		List<Integer> list1 = List.of(1, 2, 3);
 		List<Integer> list2 = List.of(4, 5, 6);
 		List<Integer> list3 = List.of(7, 8, 9);
 
 		// Create my list of list
 		System.out.println("Create a List of Lists. List<List<Integer>>");
-		System.out.println("The flapMap has the capability to convert a Collection<Collection<T>> to Collection<T>");
+		System.out.println("The flatMap has the capability to convert a Collection<Collection<T>> to Collection<T>");
 		System.out.println("Before flapping: ");
 		List<List<Integer>> listOfList = List.of(list1, list2, list3);
 		System.out.println(listOfList);
 		
 		System.out.println();
-		System.out.println("After flapping:");
+		System.out.println("After flating:");
 		listOfList = List.of(list1, list2, list3);
 		System.out.println(listOfList.stream().flatMap(x -> x.stream()).collect(Collectors.toList()).toString());
+		
+		System.out.println("Xander example with flatMap");		
+		List<Integer> myIntList = List.of(1,2,3,4,5);		
+		Map<Boolean, List<Integer>> result = myIntList.stream().collect(Collectors.groupingBy(x -> x % 2 == 0));
+		
 	}
 
 }
